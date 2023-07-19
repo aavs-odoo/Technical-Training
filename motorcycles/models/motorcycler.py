@@ -13,4 +13,4 @@ class Motorcycler(models.Model):
     current_mileage=fields.Float(string="Mileage")
     license_plate=fields.Char(string="License Plate")
     certificate_title=fields.Binary(string="Certificate")
-    register_date=fields.Date(string="Date")
+    register_date=fields.Date(string="Registration Date")
