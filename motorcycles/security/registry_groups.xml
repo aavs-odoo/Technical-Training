@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="registry_motorcycle_admin" model="res.groups">
+        <field name="name">Registry Admin</field>
+    </record>
+    <record id="registry_motorcycle_user" model="res.groups">
+        <field name="name">Registry User</field>
+    </record>
+</odoo>
