@@ -5,14 +5,14 @@ class Session(models.Model):
     _name='academy.session'
     _description ='Session Info'
 
-    name=fields.Char(string="Titlte")
+    name=fields.Char(string="Title")
     session_number=fields.Char(string="Session Number", default="S0000",copy=False,required=True,readonly=True)
     date_start= fields.Datetime(string='Start Date',required=True)
     date_end= fields.Datetime(string='End Date', required=True)
 
     course_id= fields.Many2one(comodel_name="academy.course",string='Course', ondelete='cascade',required=True)
-    instructor_id= fields.Many2one(comodel_name="res.users",string='Instructor', ondelete='restrict',required=True)
-    students_id= fields.Many2many(comodel_name="res.partner",string='Students')
+    instructor_id= fields.Many2one(comodel_name="res.users",string='Instructor', ondelete='restrict')
+    student_id= fields.Many2many(comodel_name="res.partner",string="Students")
     
     @api.model_create_multi
     def create(self,vals_list):

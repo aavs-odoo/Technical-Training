@@ -21,7 +21,7 @@
         'views/session_views.xml',
     ],
     'demo': [
-        
+        'demo/course_demo.xml'
     ],
     'application': True,
 

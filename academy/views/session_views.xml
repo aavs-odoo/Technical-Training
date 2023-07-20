@@ -60,10 +60,10 @@
                 <field name="course_id"/>
                 <field name="instructor_id"/>
                 <filter string="Start Date" name="start_date" date="date_start"/>
-                <searchpanel>
+                <!--<searchpanel>
                     <field name="course_id" select="multi" enable_counters="1" />
                     <field name="instructor_id"/>
-                </searchpanel>
+                </searchpanel>-->
              </search>
         </field>
     </record>
