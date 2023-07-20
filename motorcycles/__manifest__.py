@@ -15,11 +15,11 @@
     'data': [
         'security/registry_groups.xml',
         'security/ir.model.access.csv',
+        'data/registration_data.xml',
         'views/motorcycle_menuitems.xml',
         'views/motorcycle_views.xml'
     ],
     'demo': [
-        'demo/motorcycle_demo.xml'
     ],
     'application': True,
 
