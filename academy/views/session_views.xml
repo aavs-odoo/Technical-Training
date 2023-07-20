@@ -21,11 +21,17 @@
                                 <field name="date_end" widget="daterange"
                                 options="{'related_start_date':'date_start'}" class="oe_label" nolabel="1"/>
                             </div>
+                            <field name="duration"/>
                         </group>
                         <group>
                             <separator string="Other Fields"/>
                         </group>
                     </group>
+                    <notebook>
+                        <page string="Description">
+                            <field name="description"/>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
@@ -43,6 +49,7 @@
                 <field name="instructor_id"/>
                 <field name="date_start"/>
                 <field name="date_end"/>
+                <field name="duration"/>
                 
             </tree>    
         </field>
@@ -57,8 +64,6 @@
                 <field name="name"/>
                 <field name="session_number"/>
                 <field name="date_start"/>
-                <field name="course_id"/>
-                <field name="instructor_id"/>
                 <filter string="Start Date" name="start_date" date="date_start"/>
                 <searchpanel>
                     <field name="course_id" select="multi" enable_counters="1" />
