@@ -17,6 +17,11 @@ class Motorcycler(models.Model):
     certificate_title=fields.Binary(string="Certificate")
     register_date=fields.Date(string="Registration Date")
 
+    owner_id= fields.Many2one(comodel_name="res.partner",string="Owner")
+    email=fields.Char(related="owner_id.email")
+    phone=fields.Char(related="owner_id.phone")
+
+
     _sql_constraints=[('unique_vin','UNIQUE (vin)','There can not be a duplicate Vin')]
 
     @api.model_create_multi
