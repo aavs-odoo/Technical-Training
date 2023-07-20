@@ -1,4 +1,4 @@
-from odoo import fields, models
+from odoo import api, fields, models
 
 class Course(models.Model):
     _name="academy.course"
@@ -16,3 +16,5 @@ class Course(models.Model):
                                 ('advanced','Advanced',)
                             ],
                             copy=False)
+    
+    session_ids=fields.One2many(comodel_name="academy.session", string="Sessions",inverse_name="course_id")
