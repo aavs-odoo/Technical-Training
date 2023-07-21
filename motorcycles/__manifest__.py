@@ -11,13 +11,14 @@
     'author': 'aavs-odoo',
     'website': 'www.github.com/aavs-odoo.com',
     'category': 'Custom Modules/Kawiil',
-    'depends': ['base'],
+    'depends': ['stock','base'],
     'data': [
         'security/registry_groups.xml',
         'security/ir.model.access.csv',
         'data/registration_data.xml',
         'views/motorcycle_menuitems.xml',
-        'views/motorcycle_views.xml'
+        'views/motorcycle_views.xml',
+        'views/product_views_inherit.xml',
     ],
     'demo': [
     ],
