@@ -19,6 +19,7 @@
         'views/motorcycle_menuitems.xml',
         'views/motorcycle_views.xml',
         'views/product_views_inherit.xml',
+        'views/compare_web_template.xml',
     ],
     'demo': [
     ],

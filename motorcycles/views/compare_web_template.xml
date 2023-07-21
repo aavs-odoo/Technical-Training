@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="compare_website">
+            <t t-call="website.layout">
+                <t t-set="title">Motorcycle Compare</t>
+                <div class="oe structure">
+                    <div class="container">
+                        <h1>Motorcycle Comparison</h1>
+                        <div class="row">
+                            <div class="card-group">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Specs</h5>
+                                            <p class="card-text"> Launch Date: </p>
+                                            <p class="card-text"> Range: </p>
+                                            <p class="card-text"> Horsepower:</p>
+                                            <p class="card-text"> Torque</p>
+                                            <p class="card-text"> Top Speed  </p>
+                                            <p class="card-text"> Battery Cpacity: </p>
+                                            <p class="card-text"> Curb Weight </p>
+                                    </div>
+                                </div>
+                                <t t-foreach="motorcycles" t-as="motorcycle">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title"><t t-esc="motorcycle.model "/></h5>
+                                                <p class="card-text"><t t-esc="motorcycle.launch_date "/> </p>
+                                                <p class="card-text"> <t t-esc="motorcycle.m_range "/> </p>
+                                                <p class="card-text"><t t-esc="motorcycle.horsepower "/> </p>
+                                                <p class="card-text"> <t t-esc="motorcycle.torque"/></p>
+                                                <p class="card-text"> <t t-esc="motorcycle.top_speed"/> </p>
+                                                <p class="card-text"> <t t-esc="motorcycle. battery_capacity"/> </p>
+                                                <p class="card-text"> <t t-esc="motorcycle.curb_weight"/> </p>
+                                            </div>
+                                        </div>
+                                    </t>
+                            </div> 
+                        </div>        
+                    </div>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>
